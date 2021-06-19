@@ -155,10 +155,8 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
         seconds--;
     }
     }
+var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
-
- var countdownTimer = setInterval('secondPassed()', 1000);
-<!--</script>-->
 
 <!--home closed-->
 
