@@ -136,7 +136,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 }?>
 <!--quiz reading portion closed-->
 
-<span id="countdown" class="timer"></span>
+<span id="countdown" class="timer">
 <script>
 var seconds = 40;
     function secondPassed() {
@@ -145,10 +145,10 @@ var seconds = 40;
     if (remainingSeconds < 10) {
         remainingSeconds = "0" + remainingSeconds;
     }
-    document.getElementById('countdown').innerHTML ="Time Left" + minutes + ":" +    remainingSeconds;
+    document.getElementById('countdown').innerHTML ="Time Left : " + minutes + ":" +    remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
+        document.getElementById('countdown').innerHTML = "Buzz Buzz !! Test is Over !!";
     } else {
         seconds--;
     }
@@ -185,6 +185,7 @@ echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br /
 echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
+</span>
 //result display
 if(@$_GET['q']== 'result' && @$_GET['eid'])
 {
