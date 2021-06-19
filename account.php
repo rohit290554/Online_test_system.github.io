@@ -136,27 +136,25 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 }?>
 <!--quiz reading portion closed-->
 
-<span id="countdown" class="timer"></span>
+<!--<span id="countdown" class="timer"></span>
 <script>
-<!--<span id="countdown" class="timer"></span>>-->
- var seconds = 40;
+var seconds = 40;
     function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
     var remainingSeconds = seconds % 60;
     if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
+        remainingSeconds = "0" + remainingSeconds;
     }
     document.getElementById('countdown').innerHTML ="Time Left" + minutes + ":" +    remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Test time is over !";
-        document.getElementById('mcQuestion').submit();
-    } else {    
+        document.getElementById('countdown').innerHTML = "Buzz Buzz";
+    } else {
         seconds--;
     }
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
-</script>
+</script>-->
 
 <!--home closed-->
 
@@ -175,7 +173,7 @@ $qid=$row['qid'];
 echo '<b>Question &nbsp;'.$sn.'&nbsp;::<br />'.$qns.'</b><br /><br />';
 }
 $q=mysqli_query($con,"SELECT * FROM options WHERE qid='$qid' " );
-echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal"  id="mcQuestion">
+echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal">
 <br />';
 
 while($row=mysqli_fetch_array($q) )
@@ -188,7 +186,7 @@ echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon 
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 //result display
-if(@$_GET['q']== 'result' && @$_GET['eid']) 
+if(@$_GET['q']== 'result' && @$_GET['eid'])
 {
 $eid=@$_GET['eid'];
 $q=mysqli_query($con,"SELECT * FROM history WHERE eid='$eid' AND email='$email' " )or die('Error157');
@@ -202,7 +200,7 @@ $w=$row['wrong'];
 $r=$row['sahi'];
 $qa=$row['level'];
 echo '<tr style="color:#66CCFF"><td>Total Questions</td><td>'.$qa.'</td></tr>
-      <tr style="color:#99cc32"><td>right Answer&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr> 
+      <tr style="color:#99cc32"><td>right Answer&nbsp;<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td><td>'.$r.'</td></tr>
     <tr style="color:red"><td>Wrong Answer&nbsp;<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td><td>'.$w.'</td></tr>
     <tr style="color:#66CCFF"><td>Score&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
 }
@@ -219,7 +217,7 @@ echo '</table></div>';
 <!--quiz end-->
 <?php
 //history start
-if(@$_GET['q']== 2) 
+if(@$_GET['q']== 2)
 {
 $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " )or die('Error197');
 echo  '<div class="panel title">
@@ -245,7 +243,7 @@ echo'</table></div>';
 }
 
 //ranking start
-if(@$_GET['q']== 3) 
+if(@$_GET['q']== 3)
 {
 $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY score DESC " )or die('Error223');
 echo  '<div class="panel title">
