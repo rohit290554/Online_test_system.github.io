@@ -138,6 +138,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 
 <!--<span id="countdown" class="timer"></span>-->
 <script>
+<span id="countdown" class="timer"></span>
  var seconds = 40;
     function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
