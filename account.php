@@ -90,7 +90,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 $result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
 echo  '<div class="panel"><table class="table table-striped title1">
 <tr style="color:black"><td><b>S.N.</b></td><td><b>Topic</b></td><td><b>Total question</b></td><td><b>Marks</b></td><td><b>positive</b></td><td><b>negative</b></td><td><b>Time limit</b></td><td></td><td></td></tr>';
-//$c=1;
+$c=1;
 while($row = mysqli_fetch_array($result)) {
   $title = $row['title'];
   $total = $row['total'];
@@ -136,7 +136,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 }?>
 <!--quiz reading portion closed-->
 
-<span id="countdown" class="timer"></span>
+<!--<span id="countdown" class="timer"></span>-->
 <script>
  var seconds = 40;
     function secondPassed() {
