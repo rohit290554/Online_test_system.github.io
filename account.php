@@ -149,6 +149,7 @@ var seconds = 40;
     if (seconds == 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Buzz Buzz";
+        document.getElementById('submit').submit();
     } else {    
         seconds--;
     }
