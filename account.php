@@ -155,7 +155,7 @@ var seconds = 40;
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
-
+</span>
 <!--home closed-->
 
 <!--quiz start-->
@@ -185,7 +185,7 @@ echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br /
 echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
-</span>
+
 //result display
 if(@$_GET['q']== 'result' && @$_GET['eid'])
 {
