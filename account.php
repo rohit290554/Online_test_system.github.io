@@ -136,9 +136,9 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 }?>
 <!--quiz reading portion closed-->
 
-<!--<span id="countdown" class="timer"></span>-->
-<script>
 <span id="countdown" class="timer"></span>
+<script>
+<!--<span id="countdown" class="timer"></span>>-->
  var seconds = 40;
     function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
@@ -155,7 +155,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
         seconds--;
     }
     }
-var countdownTimer = setInterval('secondPassed()', 1000);
+//var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
 
 <!--home closed-->
