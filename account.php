@@ -145,7 +145,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
     if (remainingSeconds < 10) {
         remainingSeconds = "0" + remainingSeconds; 
     }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
+    document.getElementById('countdown').innerHTML = minutes + "time left :" +    remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Test time is over !";
