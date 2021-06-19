@@ -151,9 +151,9 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Test time is over !";
         document.getElementById('mcQuestion').submit();
-    } else {    
-        seconds--;
-    }
+    } //else {    
+        //seconds--;
+    //}
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
 </script>
