@@ -183,7 +183,7 @@ $option=$row['option'];
 $optionid=$row['optionid'];
 echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
 }
-echo'<br /><span id = 'submit'><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></span></form></div>';
+echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Submit</button></form></div>';
 //header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 //result display
