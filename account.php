@@ -149,7 +149,7 @@ var seconds = 40;
     if (seconds == 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Test time is over !";
-        document.getElementById('submit').submit();
+        document.getElementById('mcQuestion').submit();
     } else {    
         seconds--;
     }
@@ -174,7 +174,7 @@ $qid=$row['qid'];
 echo '<b>Question &nbsp;'.$sn.'&nbsp;::<br />'.$qns.'</b><br /><br />';
 }
 $q=mysqli_query($con,"SELECT * FROM options WHERE qid='$qid' " );
-echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal">
+echo '<form action="update.php?q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST"  class="form-horizontal"  id="mcQuestion">
 <br />';
 
 while($row=mysqli_fetch_array($q) )
