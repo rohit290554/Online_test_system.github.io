@@ -148,7 +148,7 @@ var seconds = 40;
     document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
+        document.getElementById('countdown').innerHTML = "Test time is over";
         document.getElementById('submit').submit();
     } else {    
         seconds--;
