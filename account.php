@@ -136,7 +136,7 @@ echo '<div class="panel"<a title="Back to Archive" href="update.php?q1=2"><b><sp
 }?>
 <!--quiz reading portion closed-->
 
-<!--<span id="countdown" class="timer"></span>
+<span id="countdown" class="timer"></span>
 <script>
 var seconds = 40;
     function secondPassed() {
@@ -154,7 +154,7 @@ var seconds = 40;
     }
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
+</script>
 
 <!--home closed-->
 
