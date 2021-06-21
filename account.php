@@ -145,7 +145,7 @@ var seconds = 40;
     if (remainingSeconds < 10) {
         remainingSeconds = "0" + remainingSeconds;
     }
-    document.getElementById('countdown').innerHTML ="Time Left : " + minutes + ":" +    remainingSeconds;
+    document.getElementById('countdown').innerHTML ="Time Left only : " + minutes + ":" +    remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Buzz Buzz !! Test is Over !!";
